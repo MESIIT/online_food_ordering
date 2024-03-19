@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section border">
+        <h1>Welcome, Home</h1>
+        <div class="border"></div>
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="float-right m-4 btn btn-secondary">Logout</button>
+        </form>
+    </div>
+{% endblock content %}
